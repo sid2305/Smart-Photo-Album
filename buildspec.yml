@@ -5,10 +5,9 @@ phases:
         python: 3.8
   build:
     commands:
-      - pip install --upgrade pip
-      - pip install pipenv --user
-      - pipenv install awscli aws-sam-cli
-      - pipenv run sam package --template-file template.yml --s3-bucket frontbucketb1 --output-template-file packaged-template.yml
+      - export BUCKET= frontbucketb1
+      - aws cloudformation package --template-file template.yml --s3-bucket $BUCKET --output-template-file packaged-template.yml
 artifacts:
   files:
+    - template.yml
     - packaged-template.yml
