@@ -10,7 +10,7 @@ host = "search-photos-ymcjc7r4ktkbmxr4jtb5ryl3oi.us-east-1.es.amazonaws.com"
 region = "us-east-1"
 service = "es"
 credentials = boto3.Session().get_credentials()
-awsauth = AWS4Auth('AKIAWZMQNT6S3QTN2O7O', 'vlH4TlEF5mhSh26b4omSI1XE4WybO9FLYTLdfHqH', region, service)
+awsauth = AWS4Auth('', '', region, service)
 print(credentials.access_key)
 es = Elasticsearch(
      hosts=[{'host': host, 'port': 443}],
