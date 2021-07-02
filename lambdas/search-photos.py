@@ -38,7 +38,7 @@ def get_keywords(inputText):
 
 
 def get_image_locations(keywords):
-    endpoint = 'https://vpc-photos-aib7nomfsh46voazwgdh2vuqmy.us-east-1.es.amazonaws.com/photos/_search'
+    endpoint = 'endpoint'
     headers = {'Content-Type': 'application/json'}
     prepared_q = []
     for k in keywords:
